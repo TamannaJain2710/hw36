@@ -43,17 +43,16 @@ function draw() {
   fedTime.on("value",function(data){
     lastFed=data.val();
   });
- 
-  //write code to display text lastFed time here
+  
   currentTime=hour();
   
   if(lastFed>=12){
-    text("Last Feed: 12 PM", 350, 30)
+    text("Last Feed"+ fedTime + "pm", 350, 30)
     
   }else if(lastFed==0){
-    text("Last Feed: 12 AM", 350, 30)
+    text("Last Feed"+ fedTime+ "am", 350, 30)
   }else{
-    text("Last Feed: 12 AM", 350, 30)
+    text("Last Feed"+ fedTime+"am", 350, 30)
   }
   drawSprites();
 }
